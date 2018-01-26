@@ -1,6 +1,6 @@
 {
   "name": "mqtt-broker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/app.js",
   "author": "Mark Njung'e",
   "license": "MIT",
