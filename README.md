@@ -1,6 +1,6 @@
 # MQTT Broker
 
-A node.js MQTT broker with data storage in MongoDB.
+A node.js MQTT broker app with data storage in MongoDB.
 
 For an explanation of MQTT, see [MQTT Essentials](https://www.hivemq.com/mqtt-essentials/).
 
