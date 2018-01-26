@@ -7,7 +7,7 @@ For an explanation of MQTT, see [MQTT Essentials](https://www.hivemq.com/mqtt-es
 # Installation
 
 ```
-git clone
+git clone https://github.com/MarkNjunge/mqtt-broker.git
 
 cd mqtt-broker && yarn
 ```
@@ -20,6 +20,7 @@ Add a .env file similar to [.env.sample](./.env.sample) in the root directory.
 2. Connect to the broker using the url `mqtt://localhost:1883` using a client app such as [MQTTBox](http://workswithweb.com/mqttbox.html).
 
 * To attach the broker to a http server, run using `yarn start -a true` the connect to `ws://localhost:3000`
+* See other run commands usin `node lib/app.js --help`
 
 # Built with
 
