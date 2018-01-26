@@ -1,0 +1,19 @@
+{
+  "name": "mqtt-broker",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "author": "Mark Njung'e",
+  "license": "MIT",
+  "scripts": {
+    "start": "node lib/app.js",
+    "server": "nodemon lib/app.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "mongoose": "^4.12.4",
+    "mosca": "^2.5.2",
+    "winston": "^2.4.0",
+    "yargs": "^10.0.3"
+  }
+}

@@ -1,0 +1,1 @@
+web: node src/app.js -a=true -p=$PORT
