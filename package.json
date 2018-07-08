@@ -9,7 +9,6 @@
     "server": "nodemon lib/app.js"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
     "dotenv": "^4.0.0",
     "mongoose": "^4.12.4",
     "mosca": "^2.5.2",
