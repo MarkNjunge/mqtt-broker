@@ -1,1 +1,1 @@
-web: node lib/app.js -a=true -p=$PORT
+web: node lib/app.js
