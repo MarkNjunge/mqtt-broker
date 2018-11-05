@@ -6,23 +6,17 @@ For an explanation of MQTT, see [MQTT Essentials](https://www.hivemq.com/mqtt-es
 
 # Installation
 
-```
-git clone https://github.com/MarkNjunge/mqtt-broker.git
-
-cd mqtt-broker && yarn
-```
-
-Add a .env file similar to [.env.sample](./.env.sample) in the root directory.
+1. Clone the repository and install the dependencies
+2. Create a .env file similar to [.env.sample](./.env.sample) in the root directory.
 
 # Usage
 
 1. Run the broker using `yarn start`.
 2. Connect to the broker using the url `mqtt://localhost:1883` using a client app such as [MQTTBox](http://workswithweb.com/mqttbox.html).
 
-* To attach the broker to a http server, run using `yarn start -a true` then connect to `ws://localhost:3000`
-* See other run commands, run `node lib/app.js --help`
+- To attach the broker to a http server, set `ATTACH_HTTP` to **true** and `HTTP_PORT` to your desired port. Then connect to `ws://localhost:3000`
 
 # Built with
 
-* [Mosca](https://github.com/mcollina/mosca)
-* [Mongoose](http://mongoosejs.com/)
+- [Mosca](https://github.com/mcollina/mosca)
+- [Mongoose](http://mongoosejs.com/)
