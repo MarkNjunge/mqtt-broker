@@ -18,5 +18,5 @@ For an explanation of MQTT, see [MQTT Essentials](https://www.hivemq.com/mqtt-es
 
 # Built with
 
-- [Mosca](https://github.com/mcollina/mosca)
+- [Aedes](https://www.npmjs.com/package/aedes)
 - [Mongoose](http://mongoosejs.com/)
