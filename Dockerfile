@@ -1,14 +1,9 @@
-FROM node:8.12.0-slim
+FROM node:12.16.3-alpine3.9
 
-WORKDIR /usr/src/app
-
-COPY package.json .
-
-RUN yarn
+WORKDIR /usr/app
 
 COPY . .
 
-EXPOSE 1883
-EXPOSE 8080
+RUN yarn
 
 CMD [ "npm", "start" ]
