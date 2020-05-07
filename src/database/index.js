@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const { mongoUri } = require("./../config");
+const { mongoUri } = require("../config");
 
 let isConnected = false;
 

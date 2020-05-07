@@ -1,12 +1,12 @@
 {
   "name": "mqtt-broker",
   "version": "1.2.1",
-  "main": "lib/app.js",
+  "main": "src/app.js",
   "author": "Mark Njung'e",
   "license": "MIT",
   "scripts": {
-    "start": "node lib/app.js",
-    "server": "nodemon lib/app.js"
+    "start": "node src/app.js",
+    "server": "nodemon src/app.js"
   },
   "dependencies": {
     "aedes": "^0.40.1",
