@@ -11,7 +11,7 @@
   "dependencies": {
     "aedes": "^0.40.1",
     "dotenv": "^4.0.0",
-    "mongoose": "^5.3.9",
+    "mongoose": "5.9.12",
     "websocket-stream": "^5.5.0",
     "winston": "^2.4.0"
   }
