@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/app.js",
-    "server": "nodemon src/app.js"
+    "start:dev": "nodemon src/app.js"
   },
   "dependencies": {
     "aedes": "^0.40.1",
