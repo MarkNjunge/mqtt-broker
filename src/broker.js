@@ -43,13 +43,18 @@ function createServer() {
   aedes.on("publish", async (packet, client) => {
     if (packet.topic.startsWith("$SYS")) return;
 
-    const data = { client: client.id, topic: packet.topic, payload: packet.payload.toString() };
+    let payload = packet.payload.toString();
+    const data = { client: client.id, topic: packet.topic, payload };
     winston.debug(`[publish] ${JSON.stringify(data)}`);
 
     if (savePayloads == true) {
+      if (hasJsonStructure(payload)) {
+        payload = JSON.parse(payload);
+      }
+
       await MqttData.add(
         packet.topic,
-        packet.payload.toString(),
+        payload,
         packet.qos,
         client.id,
         packet.messageId,
@@ -87,6 +92,17 @@ function createServer() {
   }
 
   return server;
+}
+
+function hasJsonStructure(str) {
+  if (typeof str !== "string") return false;
+  try {
+    const result = JSON.parse(str);
+    const type = Object.prototype.toString.call(result);
+    return type === "[object Object]" || type === "[object Array]";
+  } catch (err) {
+    return false;
+  }
 }
 
 module.exports = {

@@ -3,7 +3,7 @@ const Mongoose = require("mongoose");
 const MqttDataSchema = Mongoose.Schema(
   {
     topic: String,
-    payload: String,
+    payload: Object,
     qos: { type: Number, default: 0 },
     clientId: String,
     messageId: String,
