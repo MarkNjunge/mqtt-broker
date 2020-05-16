@@ -9,6 +9,18 @@ const Client = require("./database/client");
 function createServer() {
   const server = require("net").createServer(aedes.handle);
 
+  aedes.authenticate = function (client, username, password, callback) {
+    const success = true;
+    if (success) {
+      callback(null, true);
+    } else {
+      var error = new Error("Auth error");
+      // See http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc385349256
+      error.returnCode = 4;
+      callback(error, null);
+    }
+  };
+
   aedes.on("client", async client => {
     const data = { client: client.id };
     winston.debug(`[connected] ${JSON.stringify(data)}`);
